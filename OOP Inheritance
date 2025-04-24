@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class Person {
+public:
+    void speak() {
+        cout << "I am a person." << endl;
+    }
+};
+
+class Student : public Person {
+public:
+    void learn() {
+        cout << "I am learning C++." << endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.speak();
+    s.learn();
+    return 0;
+}
