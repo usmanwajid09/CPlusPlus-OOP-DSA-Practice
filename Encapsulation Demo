@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class BankAccount {
+private:
+    double balance;
+
+public:
+    BankAccount(double initial) {
+        balance = initial;
+    }
+
+    void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+
+    double getBalance() {
+        return balance;
+    }
+};
+
+int main() {
+    BankAccount acc(500);
+    acc.deposit(200);
+    cout << "Current Balance: $" << acc.getBalance() << endl;
+    return 0;
+}
